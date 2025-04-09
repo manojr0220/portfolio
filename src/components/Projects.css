@@ -1,0 +1,142 @@
+.projects {
+  background-color: var(--background-color);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background-color: var(--background-light);
+  border-radius: var(--border-radius-md);
+  padding: 30px;
+  box-shadow: var(--box-shadow);
+  transition: all var(--transition-medium);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.project-card:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(29, 61, 96, 0.15);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.project-period {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.project-company {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tech-tag {
+  background-color: var(--primary-light);
+  color: white;
+  padding: 5px 10px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.tech-tag:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.project-description {
+  flex: 1;
+}
+
+.project-description ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.project-description li {
+  color: var(--text-light);
+  margin-bottom: 10px;
+  line-height: 1.6;
+  transition: transform var(--transition-fast);
+}
+
+.project-description li:hover {
+  color: var(--primary-color);
+  transform: translateX(5px);
+}
+
+.project-link {
+  margin-top: 20px;
+}
+
+.view-project {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.view-project:hover {
+  color: var(--primary-dark);
+  transform: translateX(8px);
+}
+
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+  }
+
+  .project-company {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,106 @@
+.education {
+  background-color: var(--background-color);
+}
+
+.education-card {
+  background-color: var(--background-light);
+  border-radius: var(--border-radius-md);
+  padding: 30px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  gap: 30px;
+  transition: transform var(--transition-fast);
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.education-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(29, 61, 96, 0.15);
+}
+
+.education-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-shrink: 0;
+  animation: pulse 3s infinite;
+}
+
+.education-content {
+  flex: 1;
+}
+
+.education-degree {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+  animation: fadeInRight 1.4s ease-out;
+}
+
+.education-institution {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: var(--text-color);
+  animation: fadeInRight 1.6s ease-out;
+}
+
+.education-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+  animation: fadeInRight 1.8s ease-out;
+}
+
+.education-period {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.education-grade {
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.education-description ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  animation: fadeInUp 2s ease-out;
+}
+
+.education-description li {
+  color: var(--text-light);
+  margin-bottom: 10px;
+  line-height: 1.6;
+  transition: transform var(--transition-fast);
+}
+
+.education-description li:hover {
+  color: var(--primary-color);
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .education-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .education-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
