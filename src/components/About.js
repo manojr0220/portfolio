@@ -1,5 +1,5 @@
-import { forwardRef } from "react"
-import "./About.css"
+import { forwardRef } from "react";
+import "./About.css";
 
 const About = forwardRef((props, ref) => {
   return (
@@ -10,10 +10,13 @@ const About = forwardRef((props, ref) => {
           <div className="about-summary">
             <h3>Profile Summary</h3>
             <p>
-              Detail-oriented and results-driven Frontend Developer with hands-on experience in modern web development.
-              Proficient in front-end technologies (HTML, CSS, JavaScript, React.js, TypeScript). Adept at building
-              dynamic and responsive websites with a focus on user experience. Passionate about creating efficient,
-              user-centric solutions and continuously enhancing application performance.
+              Detail-oriented and results-driven Frontend Developer with
+              hands-on experience in modern web development. Proficient in
+              front-end technologies (HTML, CSS, JavaScript, React.js,
+              TypeScript). Adept at building dynamic and responsive websites
+              with a focus on user experience. Passionate about creating
+              efficient, user-centric solutions and continuously enhancing
+              application performance.
             </p>
           </div>
 
@@ -86,7 +89,7 @@ const About = forwardRef((props, ref) => {
         </div>
       </div>
     </section>
-  )
-})
+  );
+});
 
-export default About
+export default About;

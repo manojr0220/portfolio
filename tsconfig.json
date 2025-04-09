@@ -1,37 +1,43 @@
 {
   "compilerOptions": {
+    "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "esnext",
+      "ES2021"
     ],
+    "baseUrl": ".", 
+    "paths": {
+      "*": ["types/*"],  // Preserve your existing wildcard import
+      "@components/*": ["src/components/*"],
+      "@redux/*": ["src/Redux/*"],
+      "@icons/*": ["src/Icon/*"],
+      "@uikit/*": ["src/UIkit/*"],
+      "@api/*": ["src/api/*"]
+    },
     "allowJs": true,
-    "target": "ES6",
     "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "noEmit": true,
     "jsx": "preserve",
     "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
-    ],
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
+    ]
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "src",
     ".next/types/**/*.ts"
   ],
   "exclude": [
